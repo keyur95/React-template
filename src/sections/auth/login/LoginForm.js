@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 // @mui
-import { Link, Stack, IconButton, InputAdornment } from '@mui/material';
+import { Link, Stack, IconButton, InputAdornment, TextField } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
 // components
 import Iconify from '../../../components/Iconify';
@@ -15,6 +15,31 @@ import { FormProvider, RHFTextField, RHFCheckbox } from '../../../components/hoo
 
 export default function LoginForm() {
   const navigate = useNavigate();
+
+  const [values, setValues] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (event) => {
+    setValues({
+      ...values,
+      [event.target.name]: event.target.value
+    });
+  };
+
+  const states = [
+    {
+      value: 'Apache',
+      label: 'Apache'
+    },
+    {
+      value: 'Nginx',
+      label: 'Nginx'
+    },
+    {
+      value: "Microsoft's Web Server",
+      label: "Microsoft's Web Server"
+    }
+  ];
 
   const [showPassword, setShowPassword] = useState(false);
 
@@ -47,6 +72,27 @@ export default function LoginForm() {
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Stack spacing={3}>
         <RHFTextField name="email" label="Email address" />
+
+        <TextField
+          fullWidth
+          label="Select Type"
+          name="type"
+          onChange={handleChange}
+          required
+          select
+          SelectProps={{ native: true }}
+          value={values.type}
+          variant="outlined">
+          {states.map((option) => (
+                  <option
+                    key={option.value}
+                    value={option.value}
+                  >
+                    {option.label}
+                  </option>
+                ))}
+
+        </TextField>
 
         <RHFTextField
           name="password"
