@@ -1,8 +1,8 @@
-import PropTypes from 'prop-types';
-import { Link as RouterLink } from 'react-router-dom';
+import PropTypes from "prop-types";
+import { Link as RouterLink } from "react-router-dom";
 // @mui
-import { useTheme } from '@mui/material/styles';
-import { Box, ListItemAvatar } from '@mui/material';
+import { useTheme } from "@mui/material/styles";
+import { Box, ListItemAvatar } from "@mui/material";
 
 // ----------------------------------------------------------------------
 
@@ -18,20 +18,20 @@ export default function Logo({ disabledLink = false, sx }) {
   // const logo = <Box component="img" src="/static/logo.svg" sx={{ width: 40, height: 40, ...sx }} />
 
   const mainLogo = {
-    logo : "/static/mock-images/avatars/logo.png"
-  }
+    logo: "/static/mock-images/avatars/logo.png",
+  };
 
   const logo = (
     <ListItemAvatar>
-    <img
-      alt="logo"
-      src={mainLogo.logo}
-      style={{
-        height: 70,
-        width: 200
-      }}
-    />
-  </ListItemAvatar>
+      <img
+        alt="logo"
+        src={mainLogo.logo}
+        style={{
+          height: 70,
+          width: 200,
+        }}
+      />
+    </ListItemAvatar>
   );
 
   if (disabledLink) {
