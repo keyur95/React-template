@@ -1,7 +1,5 @@
-import { Link as RouterLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
-import { Card, Link, Container, Typography } from "@mui/material";
-import useResponsive from "../hooks/useResponsive";
+import { Card, Container } from "@mui/material";
 import Page from "../components/Page";
 import Logo from "../components/Logo";
 import { RegisterForm } from "../sections/auth/register";
@@ -26,15 +24,6 @@ const HeaderStyle = styled("header")(({ theme }) => ({
     alignItems: "flex-start",
     padding: theme.spacing(7, 5, 0, 7),
   },
-}));
-
-const SectionStyle = styled(Card)(({ theme }) => ({
-  width: "100%",
-  maxWidth: 464,
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "center",
-  margin: theme.spacing(2, 0, 2, 2),
 }));
 
 const ContentStyle = styled("div")(({ theme }) => ({

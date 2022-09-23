@@ -1,11 +1,9 @@
 import { useState } from 'react';
-// material
 import { styled, alpha } from '@mui/material/styles';
 import { Input, Slide, Button, IconButton, InputAdornment, ClickAwayListener } from '@mui/material';
-// component
 import Iconify from '../../components/Iconify';
 
-// ----------------------------------------------------------------------
+
 
 const APPBAR_MOBILE = 64;
 const APPBAR_DESKTOP = 92;
@@ -30,7 +28,7 @@ const SearchbarStyle = styled('div')(({ theme }) => ({
   },
 }));
 
-// ----------------------------------------------------------------------
+
 
 export default function Searchbar() {
   const [isOpen, setOpen] = useState(false);

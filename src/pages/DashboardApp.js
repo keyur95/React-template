@@ -5,7 +5,7 @@ import { AppWidgetSummary } from "../sections/@dashboard/app";
 export default function DashboardApp() {
   return (
     <Page title="Dashboard">
-      <Container maxWidth="xl">
+      <Container maxWidth="xl ">
         <Typography variant="h4" sx={{ mb: 5 }}>
           Hi, Welcome back
         </Typography>
@@ -13,36 +13,37 @@ export default function DashboardApp() {
         <Grid container spacing={3}>
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
-              title="Weekly Sales"
-              total={714000}
-              icon={"ant-design:android-filled"}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary
-              title="New Users"
-              total={1352831}
-              color="info"
-              icon={"ant-design:apple-filled"}
-            />
-          </Grid>
-
-          <Grid item xs={12} sm={6} md={3}>
-            <AppWidgetSummary
-              title="Item Orders"
-              total={1723315}
+              title="Amazon Servers"
+              total={19}
               color="warning"
-              icon={"ant-design:windows-filled"}
+              icon={"ant-design:amazon-circle-filled"}
             />
           </Grid>
 
           <Grid item xs={12} sm={6} md={3}>
             <AppWidgetSummary
-              title="Bug Reports"
-              total={234}
+              title="Apache Servers"
+              total={12}
+              color="info"
+              icon={"vscode-icons:file-type-apache"}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              title="Nginx Server"
+              total={11}
+              color="warning"
+              icon={"cib:nginx"}
+            />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={3}>
+            <AppWidgetSummary
+              title="Microsoft Server"
+              total={10}
               color="error"
-              icon={"ant-design:bug-filled"}
+              icon={"logos:microsoft-icon"}
             />
           </Grid>
         </Grid>

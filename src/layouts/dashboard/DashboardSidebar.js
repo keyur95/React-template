@@ -1,21 +1,13 @@
 import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { Link as RouterLink, useLocation } from "react-router-dom";
-// material
 import { styled } from "@mui/material/styles";
 import { Box, Drawer } from "@mui/material";
-// mock
-import account from "../../_mock/account";
-// hooks
 import useResponsive from "../../hooks/useResponsive";
-// components
 import Logo from "../../components/Logo";
 import Scrollbar from "../../components/Scrollbar";
 import NavSection from "../../components/NavSection";
-//
 import navConfig from "./NavConfig";
-
-// ----------------------------------------------------------------------
 
 const DRAWER_WIDTH = 280;
 
@@ -24,14 +16,6 @@ const RootStyle = styled("div")(({ theme }) => ({
     flexShrink: 0,
     width: DRAWER_WIDTH,
   },
-}));
-
-const AccountStyle = styled("div")(({ theme }) => ({
-  display: "flex",
-  alignItems: "center",
-  padding: theme.spacing(2, 2.5),
-  borderRadius: Number(theme.shape.borderRadius) * 1.5,
-  backgroundColor: theme.palette.grey[500_12],
 }));
 
 DashboardSidebar.propTypes = {

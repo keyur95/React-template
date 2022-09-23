@@ -1,10 +1,7 @@
 import PropTypes from "prop-types";
 import { Link as RouterLink } from "react-router-dom";
-// @mui
 import { useTheme } from "@mui/material/styles";
-import { Box, ListItemAvatar } from "@mui/material";
-
-// ----------------------------------------------------------------------
+import { ListItemAvatar } from "@mui/material";
 
 Logo.propTypes = {
   disabledLink: PropTypes.bool,
@@ -12,11 +9,6 @@ Logo.propTypes = {
 };
 
 export default function Logo({ disabledLink = false, sx }) {
-  const theme = useTheme();
-
-  // OR
-  // const logo = <Box component="img" src="/static/logo.svg" sx={{ width: 40, height: 40, ...sx }} />
-
   const mainLogo = {
     logo: "/static/mock-images/avatars/logo.png",
   };
